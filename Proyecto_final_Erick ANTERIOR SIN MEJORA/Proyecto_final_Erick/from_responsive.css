@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+form{
+    font-family: sans-serif;
+    background: rgb(17, 38, 89);
+    height: auto;
+    width: auto;
+    padding:30px;
+    border-radius: 15%;
+    border: 1px solid rgb(164, 56, 101);
+    box-shadow: 0 0 10px rgb(104, 97, 97);
+}
+div{
+    padding: 20px;
+    font-family: cursive;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    height: 45px;
+    width: 80px;
+    border-radius: 15%;
+    box-shadow:0 0 10px black;
+    font-size: medium;
+    background:wheat;
+
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+input[type="text"]{
+    text-transform: uppercase;
+}
+label{
+    border-color: red;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="from_responsive.css">
+    <script>function crearCamposDeEntrada() {
+        var cantidadNombres = parseInt(document.getElementById("cantidadNombres").value);
+        var formulario = document.getElementById("formulario");
+    
+        formulario.innerHTML = ''; // Limpiamos el contenido anterior
+    
+        for (var i = 1; i <= cantidadNombres; i++) {
+            var label = document.createElement("label");
+            label.innerHTML = "Linfosito " + i + ": ";
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "nombre" + i;
+            input.id="nombre"+i;
+    
+            formulario.appendChild(label);
+            formulario.appendChild(input);
+            formulario.appendChild(document.createElement("br"));
+        }
+       /* var sec_la=document.createElement("label")
+        sec_la.textContent="Secuencias"
+        formulario.appendChild(sec_la)
+       var input= document.createElement("input")
+       input.type="number"
+       input.id="secuencias"
+       input.placeholder="no mas de 10"
+       formulario.appendChild(input)*/
+        var calcularButton = document.createElement("button");
+    calcularButton.id = "button";
+    calcularButton.textContent = "Calcular";
+    formulario.appendChild(calcularButton)
+    var labelr=document.createElement("Label")
+    label.id="resultado"
+    formulario.appendChild(labelr)
+    }</script>
+
+</head>
+<body>
+   <div class="container">
+    <h1>Formulario de Linfosillos</h1>
+    <label for="cantidadNombres">Número de Linfositos a ingresar:</label>
+    <input type="number" id="cantidadNombres" placeholder="Enteros positivos"><br>
+    <label for="secuencias">Cantidad de secuencias</label>
+    <input type="number" id="secuencias" placeholder="No mas de 10">
+    <button onclick="crearCamposDeEntrada()">Crear Campos</button>
+    <form id="formulario" action="#" method="post"><br>
+    </form>
+</div>
+<script src="form_respon.js"></script>
+</body>
+</html>
